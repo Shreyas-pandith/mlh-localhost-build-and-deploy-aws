@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+      integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Article</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default topbar-bot">
+      <div class="container-fluid">
+        <div class="navbar-header flex-topbar">
+          <a class="navbar-brand" href="/">
+            <img alt="mlh-logo" src="/static/logo.svg" />
+          </a>
+         <center> <p class="navbar-text">Articles App</p></center>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row form-container">
+        <div class="col-md-10">
+          <form action="/new_article" method="POST" id="article_form">
+            <div class="form-group">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Title"
+                  name="title"
+                  id="title"
+                  
+                />
+
+                <br>
+                <br>
+
+                <div class="input-group mb-10 ">
+
+                <textarea cols="100" rows="10"
+               
+                class="form-control"
+                      placeholder="Description"
+                      name="description"
+                      id="description"></textarea>
+                </div>
+
+
+                <div class="input-group mb-10">
+                  <button
+                    class="btn btn-primary"
+                    type="submit"
+                    id="submit"
+                   
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="card-columns" id="events"></div>
+    </div>
+
+   
+    
+  </body>
+</html>
+

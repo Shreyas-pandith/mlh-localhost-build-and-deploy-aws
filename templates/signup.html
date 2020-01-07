@@ -1,0 +1,121 @@
+<html>
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+    
+        <!-- Bootstrap CSS -->
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Montserrat"
+          rel="stylesheet"
+        />
+        
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+          integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/static/style.css" />
+        <title>MLH - Articles app</title>
+      </head>
+<body>
+  <br><br>
+    <div class="formwrapper container md-6">
+        <form method=post>
+                
+                {% for message in get_flashed_messages() %}
+                  <div class="alert alert-warning">
+                      <button type="button" class="close" data-dismiss="alert">&times;</button>
+                      {{ message }}
+                  </div>
+                {% endfor %}
+                <div class="card">
+
+                        <div class="card-header">
+                                <h1>Sign Up</h1>
+                        </div>
+                        <div class="card-body">
+                             <div class="row name">
+                                    <div class="col-md-4">
+                                      {{ form.name.label }}
+                                     
+                                    </div>
+                                    <div class="col-md-6">
+                                      {{ form.name(placeholder='John Smith') }}
+                                    </div>
+                             </div>
+                             
+                         
+
+                             <div class="row email">
+                                  <div class="col-md-4">
+                                    {{ form.email.label }}
+                                  </div>
+                                  <div class="col-md-6">
+                                    {{ form.email(placeholder='youremail@example.com') }}
+                                  </div>
+                             </div>
+                               
+                             {% if form.email.errors %}
+                             <ul class="errors">
+                               {% for error in form.email.errors %}<li>{{ error }}</li>{% endfor %}
+                             </ul>
+                           {% endif %}
+
+
+
+                                <div class="row password">
+                                        <div class="col-md-4">
+                                          {{ form.password.label }}
+                                        </div>
+                                        <div class="col-md-6">
+                                          {{ form.password }}
+                                        </div>
+                                 </div>
+
+                                 {% if form.password.errors %}
+                                 <ul class="errors">
+                                   {% for error in form.password.errors %}<li>{{ error }}</li>{% endfor %}
+                                 </ul>
+                               {% endif %}
+
+                                <div class="row confirm">
+                                      <div class="col-md-4">
+                                        {{ form.confirm.label }}
+                                      </div>
+                                      <div class="col-md-6">
+                                        {{ form.confirm }}
+                                      </div>
+                               </div>
+                               {% if form.confirm.errors %}
+                               <ul class="errors">
+                                 {% for error in form.confirm.errors %}<li>{{ error }}</li>{% endfor %}
+                               </ul>
+                                {% endif %}
+                               
+                  
+                              
+                                <div class="submitbutton">
+                                  <input id="submit" class="btn btn-primary" type="submit" value="Submit">
+                                </div>
+                        </div>
+                </div>
+                
+        </form>
+        <div class="loginsignup">
+          <span>Already have an account? <a href="#">Log in.</a><span>
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=yes"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+      integrity="sha256-BJ/G+e+y7bQdrYkS2RBTyNfBHpA9IuGaPmf9htub5MQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>MLH - Articles app</title>
+  </head>
+  <body style="overflow-x: hidden;">
+    <nav class="navbar navbar-default topbar-bot">
+      <div class="container-fluid">
+        <div class="navbar-header flex-topbar">
+          <a class="navbar-brand" href="/">
+            <img alt="mlh-logo" src="/static/logo.svg" />
+          </a>
+          <h1 class="navbar-text">Articles App</h1>
+        </div>
+      </div>
+    </nav>
+
+   <div class="row ">
+     <div class="col-md-3 align-self-center">
+      <a href="/new_article"><button class="btn btn-primary ml-5" >Write Article</button></a>
+     </div>
+     <div class="col-md-3 align-self-center">
+      <a href="/"><button class="btn btn-primary ml-5" >All Articles</button></a>
+     </div>
+     <div class="col-md-3 align-self-center">
+      <a href="/my_articles"><button class="btn btn-primary ml-5" >My Articles</button></a>
+     </div>
+     <div class="col-md-3 align-self-center">
+        <a href="/logout"><button class="btn btn-primary ml-5" >logout</button></a>
+       </div>
+   </div>
+  
+    
+    <hr>
+    <br>
+    <h2><center>My Articles</center></h2>
+    <br>
+    <div class="container md-8">
+
+    
+    <div class="row">
+    {% for article in articles %}
+   
+     
+   <div class="col-md-6">
+
+   
+
+     
+    <div class="jumbotron  align-self-center ">
+      
+      <h2><u>Title: </u>{{article.title}} </h2>
+      <br>
+      <h4>{{article.content}}</h4>
+    
+    
+   
+    </div>
+    </div>
+ 
+
+    
+    <br>
+   
+    {% endfor %}
+  </div>
+
+  </div>
+  </body>
+</html>
