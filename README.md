@@ -1,5 +1,7 @@
 # Localhost AWS
 
+Presentaion: https://docs.google.com/presentation/d/1rAbb08PRyDsi__F6UzoJL_1Qcwm3fCsy7ZZUjRLJUT0/edit?usp=sharing
+
 ## Requirements and dependencies
 
 - [Python3](https://www.python.org/)
